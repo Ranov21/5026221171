@@ -9,20 +9,20 @@
 	<a href="https://www.malasngoding.com/category/laravel">www.malasngoding.com</a>
 
     <br>
+        <p>Nama : {{ $nama }}</p>
+        <p>Umur : {{ $umur }}</p>
+        <p>Hasil Perkalian : {{ $hasil }}</p>
 
-	<p>Nama : {{ $nama }}</p>
-    <p>umur : {{ $umur }}</p>
-    <p>hasil perkalian : {{ $hasil }}</p>
-    <p>Mata Pelajaran</p>
-	<ul>
+        <p>Mata Pelajaran :</p>
+        <ul>
 
-		@foreach($matkul as $m)
+            @foreach($matkul as $m)
 
-		<li>{{ $m }}</li>
+            <li>{{ $m }}</li>
 
-		@endforeach
+            @endforeach
 
-	</ul>
+        </ul>
 
 </body>
 </html>

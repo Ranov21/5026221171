@@ -8,7 +8,7 @@ class PegawaiController extends Controller
 {
     public function index($nama){
 
-    	return "<h1>"  . $nama .  "</h1>";
+    	return "<h1>" . $nama . "</h1>" ;
 
     }
 
@@ -16,12 +16,13 @@ class PegawaiController extends Controller
 
     	return view('formulir');
 
-}
+    }
 
-public function proses(Request $request){
+    public function proses(Request $request){
         $nama = $request->input('nama');
      	$alamat = $request->input('alamat');
         return "Nama : ".$nama.", Alamat : ".$alamat;
-}
+    }
+
 
 }

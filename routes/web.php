@@ -19,7 +19,7 @@ Route::get('/', function () {
 });
 
 Route::get('/error', function () {
-    return "<h1>Server Error : Ada Kesalahan di Server</h1>";
+    return "<h1>Server Error : ada kesalahan di server</h1>";
 });
 
 // route blog
@@ -27,14 +27,19 @@ Route::get('/blog', 'App\Http\Controllers\BlogController@home');
 Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
 Route::get('/blog/kontak', 'App\Http\Controllers\BlogController@kontak');
 
+// coba coba
+
 Route::get('dosen', 'App\Http\Controllers\DosenController@index');
 Route::get('blog2', 'App\Http\Controllers\DosenController@blog');
 Route::get('biodata', 'App\Http\Controllers\DosenController@biodata');
 
-Route::get('/Pegawai/{nama}', 'App\Http\Controllers\PegawaiController@index');
+//Route::get('/pegawai/{nama}', 'App\Http\Controllers\PegawaiController@index');
+
+
 Route::get('/formulir', 'App\Http\Controllers\PegawaiController@formulir');
 Route::post('/formulir/proses', 'App\Http\Controllers\PegawaiController@proses');
 
+// route ets
 Route::get('/home1', 'App\Http\Controllers\EtsController@home1');
 Route::get('/home1/hello', 'App\Http\Controllers\EtsController@hello');
 Route::get('/home1/style', 'App\Http\Controllers\EtsController@style');
@@ -43,3 +48,12 @@ Route::get('/home1/responsive', 'App\Http\Controllers\EtsController@responsive')
 Route::get('/home1/form', 'App\Http\Controllers\EtsController@form');
 Route::get('/home1/linktree', 'App\Http\Controllers\EtsController@linktree');
 Route::get('/home1/testimoni', 'App\Http\Controllers\EtsController@testimoni');
+
+//route CRUD
+Route::get('/pegawaiDB','App\Http\Controllers\PegawaiDBController@index');
+Route::get('/pegawaiDB/tambah','App\Http\Controllers\PegawaiDBController@tambah');
+Route::post('/pegawaiDB/store','App\Http\Controllers\PegawaiDBController@store');
+Route::get('/pegawaiDB/hapus/{id}','App\Http\Controllers\PegawaiDBController@hapus');
+Route::get('/pegawaiDB/edit/{id}','App\Http\Controllers\PegawaiDBController@edit');
+Route::post('/pegawaiDB/update','App\Http\Controllers\PegawaiDBController@update');
+Route::get('/pegawaiDB/cari','App\Http\Controllers\PegawaiDBController@cari');

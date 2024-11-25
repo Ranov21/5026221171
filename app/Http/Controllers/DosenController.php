@@ -11,19 +11,20 @@ class DosenController extends Controller
         return "<h1>Halo ini adalah method index, dalam controller DosenController. - www.malasngoding.com</h1>";
     }
 
-    //
     public function blog(){
         return view('blog');
     }
 
     public function biodata(){
-        $nama = "Muhammad Rafi Novyansyah";
-        $umur = 20;
-        $hasil = 26 + 50;
+        $nama = "Dafa Fawwaz" ;
+        $umur = 20 ;
+        $hasil = 25+70 ;
         $pelajaran = ["Algoritma & Pemrograman","Kalkulus","Pemrograman Web"];
-        return view('biodata',['nama' => $nama,
-                     'umur' => $umur,
-                     'hasil' => $hasil,
-                     'matkul' => $pelajaran]);
+    	return view('biodata',[
+            'nama' => $nama ,
+            'umur' => $umur ,
+            'hasil' => $hasil ,
+            'matkul' => $pelajaran ,
+             ]);
     }
 }

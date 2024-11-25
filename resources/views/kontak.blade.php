@@ -1,3 +1,4 @@
+
 <!-- Menghubungkan dengan view template master -->
 @extends('master')
 
