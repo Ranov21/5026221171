@@ -3,6 +3,8 @@
     "scripts": {
         "dev": "npm run development",
         "development": "mix",
+        "dev:php": "docker-compose exec web sh -c \"cd /var/www/html/5026221171 && php artisan serve --host=0.0.0.0 --port=8000\"",
+        "make:controller": "docker-compose exec web sh -c \"cd /var/www/html/5026221171 && php artisan make:controller\"",
         "watch": "mix watch",
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
