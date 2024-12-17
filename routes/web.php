@@ -57,3 +57,9 @@ Route::get('/pegawaiDB/hapus/{id}','App\Http\Controllers\PegawaiDBController@hap
 Route::get('/pegawaiDB/edit/{id}','App\Http\Controllers\PegawaiDBController@edit');
 Route::post('/pegawaiDB/update','App\Http\Controllers\PegawaiDBController@update');
 Route::get('/pegawaiDB/cari','App\Http\Controllers\PegawaiDBController@cari');
+
+//route EAS
+Route::get('/', [KaryawanController::class, 'index'])->name('karyawan.index');
+Route::get('/create', [KaryawanController::class, 'create'])->name('karyawan.create');
+Route::post('/', [KaryawanController::class, 'store'])->name('karyawan.store');
+Route::delete('/{kodepegawai}', [KaryawanController::class, 'destroy'])->name('karyawan.destroy');
